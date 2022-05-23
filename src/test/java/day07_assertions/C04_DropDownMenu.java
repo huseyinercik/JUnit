@@ -45,9 +45,9 @@ public class C04_DropDownMenu {
 
         //3- dropdown da var olan option lardan istedigimiz bir taneyi secelim
 
-        select.deselectByVisibleText("Books");
-        //select.deselectByIndex(5);
-        //select.deselectByValue("search-alias=stripbooks-intl-ship");
+        select.selectByVisibleText("Books");
+        //select.selectByIndex(5);
+        //select.selectByValue("search-alias=stripbooks-intl-ship");
 
         WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Java"+ Keys.ENTER);
