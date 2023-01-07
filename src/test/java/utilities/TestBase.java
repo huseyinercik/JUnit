@@ -23,4 +23,14 @@ public abstract class TestBase {
     public void tearDown(){
         driver.quit();
     }
+
+    public static void waitFor(int wait) {
+        try {
+            Thread.sleep(wait*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 }

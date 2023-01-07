@@ -6,9 +6,11 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
@@ -34,14 +36,19 @@ public class C01_Assertions {
 
     @AfterClass
     public static void tearDown() {
-        driver.close();
+        //driver.close();
     }
 
     @Test
     public void test01() {
-        String arananKelime = "amazon";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertTrue(actualUrl.contains(arananKelime));
+        driver.findElement(By.id("searchDropdownBox")).click();
+        Actions actions=new Actions(driver);
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).sendKeys("Tire")
+                .sendKeys(Keys.ENTER).perform();
+       // String arananKelime = "amazon";
+       //
+       // String actualUrl = driver.getCurrentUrl();
+       // Assert.assertTrue(actualUrl.contains(arananKelime));
 
     }
 

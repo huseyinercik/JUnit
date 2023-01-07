@@ -16,7 +16,7 @@ public class C02_Soru {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("http://zero.webappsecurity.com");
+       driver.get("http://zero.webappsecurity.com");
         //2. Signin buttonuna tiklayin
         driver.findElement(By.xpath("//button[@id='signin_button']")).click();
         //3. Login alanine  “username” yazdirin
@@ -32,5 +32,6 @@ public class C02_Soru {
         //8. tarih kismina “2020-09-10” yazdirin
         //9. Pay buttonuna tiklayin
         //10. “The payment was successfully submitted.” mesajinin ciktigini control edin
+
     }
 }

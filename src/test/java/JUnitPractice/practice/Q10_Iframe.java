@@ -50,5 +50,6 @@ public class Q10_Iframe extends TestBase {
 
         }Thread.sleep(3000);
         driver.findElement(By.xpath("//button[@class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored\"]")).click();
+
     }
 }

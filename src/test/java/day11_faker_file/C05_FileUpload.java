@@ -28,7 +28,7 @@ public class C05_FileUpload extends TestBase {
         String farkliKisim=System.getProperty("user.home");
         String ortakKisim="\\Desktop\\text.txt";
         String yuklenekDosya=farkliKisim+ortakKisim;
-
+        //user.home\Desktop\text.txt
         //3. adim sendKeys ile dosya yolunu secme butonuna yollayalim
         dosyaSecButonu.sendKeys(yuklenekDosya);
         //5.Upload butonuna basalim.
@@ -36,7 +36,7 @@ public class C05_FileUpload extends TestBase {
         //6.“File Uploaded!” textinin goruntulendigini test edelim.
         WebElement yaziElementi=driver.findElement(By.tagName("h3"));
         Assert.assertTrue(yaziElementi.isDisplayed());
-
+//C:\Users\Asus
         Thread.sleep(5000);
     }
 }
